@@ -1,0 +1,17 @@
+* {
+  font-size: "16px";
+  margin: 1rem;
+}
+.btn {
+  padding: 1rem 3rem 1rem;
+}
+.data {
+  border: 1px dashed navy;
+  color: navy;
+  background-color: yellow;
+  width: 8rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
