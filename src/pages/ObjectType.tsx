@@ -28,6 +28,7 @@ const person: {
   age: 22,
 };
 
+//nested objects
 console.log(product, "product");
 
 const ObjectType = () => {
