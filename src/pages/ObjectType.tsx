@@ -3,14 +3,14 @@ import { useNavigate } from "react-router-dom";
 const product: {
   tags: string[];
   details: {
-    title: string;
+    title: any;
     description: string;
   };
   role: [number, string]; //tuple type exactly two elements for ((****fixed lenght****))
 } = {
   tags: ["offer", "new"],
   details: {
-    title: "Carpet",
+    title: true,
     description: "A great",
   },
   role: [2, "role"],
