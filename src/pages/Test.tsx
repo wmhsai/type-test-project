@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ObjectType from "./ObjectType";
 import { useNavigate } from "react-router-dom";
 const Test = () => {
   const navigate = useNavigate();
@@ -59,8 +58,6 @@ const Test = () => {
       >
         ObjectType
       </button>
-      {/*without this in onClick ()=> we have error*/}
-      <ObjectType />
     </div>
   );
 };
