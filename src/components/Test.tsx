@@ -19,13 +19,29 @@ const Test = () => {
       return setData(phrase + n);
     }
   }
+
+  //when we convert const to let want type ****
+  let num1: number;
+  num1 = 6;
+
+  const num2 = 4;
+  const showResults1 = true;
+  //in boolean when we use let have error because properties always going to be false??
+
+  const showResults2 = false;
+  let phrase1: string;
+  phrase1 = "sum is : ";
+  const phrase2 = "sub is : ";
   return (
     <div>
-      <button onClick={() => calender(6, 4, true, "sum is : ")} className="btn">
+      <button
+        onClick={() => calender(num1, num2, showResults1, phrase1)}
+        className="btn"
+      >
         SUM
       </button>
       <button
-        onClick={() => calender(6, 4, false, "sub is : ")}
+        onClick={() => calender(num1, num2, showResults2, phrase2)}
         className="btn"
       >
         SUB
