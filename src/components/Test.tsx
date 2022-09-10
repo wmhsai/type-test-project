@@ -1,5 +1,8 @@
 import { useState } from "react";
+import ObjectType from "./ObjectType";
+import { useNavigate } from "react-router-dom";
 const Test = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState<string>();
   function calender(
     num1: number,
@@ -48,6 +51,16 @@ const Test = () => {
       </button>
       {/*without this in onClick ()=> we have error*/}
       <div className="data">{data}</div>
+      <button
+        onClick={() => {
+          navigate("./ObjectType");
+        }}
+        className="btn"
+      >
+        ObjectType
+      </button>
+      {/*without this in onClick ()=> we have error*/}
+      <ObjectType />
     </div>
   );
 };
