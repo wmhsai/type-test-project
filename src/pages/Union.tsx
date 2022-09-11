@@ -2,18 +2,15 @@ import { useState } from "react";
 
 const Union = () => {
   const [data, setData] = useState<string | number>();
-
-  enum Types {
+  enum Types { //enum type
     IS_NUMBER = "is_num",
     IS_STRING = "is_str",
   }
-  //third param is literal and change if whit this
-  //i write this with literal && union && enum
-  function calender(
-    num1: number | string,
-    num2: number | string,
-    type: Types.IS_NUMBER | Types.IS_STRING
-  ) {
+  type Literal = Types.IS_NUMBER | Types.IS_STRING; //aliases types
+  type Union = number | string;
+
+  //third param is type literal
+  function calender(num1: Union, num2: Union, type: Literal): any {
     let res;
     // if (typeof num1 === "number" && typeof num2 === "number") {
     //   res = num1 + num2;
@@ -27,6 +24,17 @@ const Union = () => {
     }
     return setData(res);
   }
+
+  function testVoid(): void {
+    //void type work without return
+  }
+  function testUndefined(): undefined {
+    //undefined type doen't work without return
+    return;
+  }
+
+  console.log(testVoid, "testVoid");
+  console.log(testUndefined, "testUndefined");
 
   return (
     <div>
