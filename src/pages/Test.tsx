@@ -66,6 +66,14 @@ const Test = () => {
       >
         Union
       </button>
+      <button
+        onClick={() => {
+          navigate("./FunctionType");
+        }}
+        className="btn"
+      >
+        FunctionType
+      </button>
     </div>
   );
 };
