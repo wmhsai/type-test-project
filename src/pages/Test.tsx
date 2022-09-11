@@ -58,6 +58,14 @@ const Test = () => {
       >
         ObjectType
       </button>
+      <button
+        onClick={() => {
+          navigate("./Union");
+        }}
+        className="btn"
+      >
+        Union
+      </button>
     </div>
   );
 };
